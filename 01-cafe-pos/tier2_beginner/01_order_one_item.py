@@ -47,14 +47,16 @@ MENU = {
 # TODO 2: check whether order_item exists in MENU
 #         - if it does: print "Great choice! {order_item} costs ${price}."
 #         - if it doesn't: print "Sorry, we don't have {order_item} on the menu today."
+customer_order = [] 
 while True:
     while True:
-        customer_order = input("what would you like to order")
-        if customer_order in MENU:
-            print(f"{customer_order} will cost {MENU[(customer_order)]}")
+        customer_item = input("what would you like to order")
+        if customer_item in MENU:
+            print(f"{customer_item} will cost {MENU[(customer_item)]}")
+            customer_order.append(customer_item)
             break 
         else:
-            print(f"sorry we do not carry {customer_order} at our location")
+            print(f"sorry we do not carry {customer_item} at our location")
 
     while True:
         more_food = input("would you like anything else? \n yes? \n no?")
@@ -67,3 +69,10 @@ while True:
 
     if more_food == ("no"):
         break 
+
+total_price = 0
+
+for x in customer_order:
+    total_price = (total_price + MENU[x])
+
+print(f"items: {customer_order} your total is {total_price}")
