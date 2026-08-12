@@ -40,6 +40,15 @@ MENU = {
 
 
 def get_price(item_name):
+    customer_item = input()
+    if (customer_item) in (MENU):
+        return (MENU[customer_item])
+
+
+
+
+
+
     """
     Return the price of item_name from MENU, or None if it isn't on the menu.
 
