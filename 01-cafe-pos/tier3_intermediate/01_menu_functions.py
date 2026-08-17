@@ -40,10 +40,9 @@ MENU = {
 
 
 def get_price(item_name):
-    customer_item = input()
-    if (customer_item) in (MENU):
-        return (MENU[customer_item])
-
+    if (item_name) in (MENU):
+        return (MENU[item_name])
+    else:
 
 
 
