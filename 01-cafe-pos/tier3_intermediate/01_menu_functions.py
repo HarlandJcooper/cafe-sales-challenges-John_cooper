@@ -60,6 +60,11 @@ def get_price(item_name):
 
 
 def calculate_total(order_list):
+    for x in order_list:
+        if x in MENU:
+            total_price += MENU[x] 
+    return total_price
+
     """
     order_list is a list of item names, e.g. ["Coffee", "Muffin"].
     Return the sum of all their prices (use get_price() to look each one up).
