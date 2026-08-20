@@ -41,8 +41,8 @@ MENU = {
 
 def get_price(item_name):
     if (item_name) in (MENU):
+        order_list.append(item_name)
         return (MENU[item_name])
-    else:
 
 
 
@@ -76,8 +76,13 @@ def calculate_total(order_list):
     # TODO: implement this function
     pass
 
+receipt = []
+order_list = ('Coffee', 'Tea')
+def display_receipt(order_list, total_price):
+    for x in order_list:
+        receipt.append(x, MENU[x], )
 
-def display_receipt(order_list, total):
+    print(receipt)
     """
     Print a neatly formatted receipt for order_list, followed by the total,
     matching the style shown in the EXAMPLE OUTPUT above.
@@ -95,3 +100,4 @@ if __name__ == "__main__":
 
     # TODO: once the loop is done, call calculate_total() and then
     # display_receipt() to show the final receipt.
+    display_receipt()
