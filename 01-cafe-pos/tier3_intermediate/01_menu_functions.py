@@ -78,11 +78,16 @@ def calculate_total(order_list):
 
 receipt = []
 order_list = ('Coffee', 'Tea')
+total_price = 8
+
 def display_receipt(order_list, total_price):
     for x in order_list:
-        receipt.append(x, MENU[x], )
-
+        receipt.append(f'{x}, {MENU[x]}, ')
+    receipt.append(f'x, {MENU[x]}, ')
     print(receipt)
+    print(total_price)
+
+
     """
     Print a neatly formatted receipt for order_list, followed by the total,
     matching the style shown in the EXAMPLE OUTPUT above.
@@ -100,4 +105,5 @@ if __name__ == "__main__":
 
     # TODO: once the loop is done, call calculate_total() and then
     # display_receipt() to show the final receipt.
-    display_receipt()
+
+    display_receipt(order_list, total_price)
